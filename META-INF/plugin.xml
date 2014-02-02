@@ -1,0 +1,28 @@
+<idea-plugin version="2">
+    <name>pomodoro</name>
+    <description>pomodoro timer</description>
+    <version>0.9</version>
+    <vendor url="http://github.com/dkandalov/pomodoro-tm">chi</vendor>
+    <idea-version since-build="8000"/>
+    <description>
+        <![CDATA[
+                ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+                ]]>
+    </change-notes>
+    <depends>com.intellij.modules.platform</depends>
+    <application-components>
+        <component>
+            <implementation-class>org.app4j.tool.pomodoro.PomodoroComponent</implementation-class>
+        </component>
+    </application-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceInterface="org.app4j.tool.pomodoro.Settings"
+                            serviceImplementation="org.app4j.tool.pomodoro.Settings"/>
+        <applicationService serviceInterface="org.app4j.tool.pomodoro.LogStorage"
+                            serviceImplementation="org.app4j.tool.pomodoro.LogStorage"/>
+    </extensions>
+</idea-plugin>
