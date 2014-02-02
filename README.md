@@ -1,20 +1,21 @@
-## Intellij IDEA Pomodoro plugin
-Inspired by https://github.com/dkandalov/pomodoro-tm, and use some of the icons.
+#### Intellij IDEA Pomodoro plugin
+
+Inspired by https://github.com/dkandalov/pomodoro-tm, and use some icons.
 ![](https://raw2.github.com/chifei/pomodoro/master/doc/idea.png)
 
-### Features
-- Pomodoro counter
-- Current week's report for IDEA time and pomodoro time.
+#### Features
+- pomodoro timer
+- current week's report for IDEA time and pomodoro time.
 
-### TODO
-- Better report, support week/month/year
-- Add settings page.
+#### Todo
+- add week/month/year report
+- add break time support
+- add settings page.
 
-### How to install
+#### Install
 - download pomodoro.zip
-- Open IDEA settings/plugins, install plugin from disk
+- open IDEA settings/plugins, install plugin from disk
 - select pomodoro.zip
 - restart IDEA
-
 
 
