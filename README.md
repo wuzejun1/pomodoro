@@ -1,7 +1,7 @@
 #### Intellij IDEA Pomodoro plugin
 
 Inspired by https://github.com/dkandalov/pomodoro-tm, and use some icons.
-![](https://raw2.github.com/chifei/pomodoro/master/doc/idea.png)
+![](https://raw2.github.com/chifei/pomodoro/d957c4d7ca089597551953d7444bc76ae4b34822/doc/idea.png)
 
 #### Features
 - pomodoro timer
