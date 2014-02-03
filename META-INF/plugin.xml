@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <name>pomodoro</name>
     <description>pomodoro timer and report</description>
-    <version>0.1</version>
+    <version>0.2</version>
     <vendor url="https://github.com/chifei/pomodoro">chi</vendor>
     <idea-version since-build="8000"/>
     <description>

@@ -113,6 +113,10 @@ public class Logger {
 					state = 4;
 				}
 			}
+
+			if (lastIndex < line.length() && state == 2) {
+				totalSeconds += Dates.secondsOfDay(new Date()) - start;
+			}
 		}
 
 		public boolean isComplete() {

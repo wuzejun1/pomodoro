@@ -76,6 +76,14 @@ public class Pomodoro {
 		SOUND_TICK.fadeOut(15);
 	}
 
+	public void breakStart() {
+		SOUND_ALARM.play();
+		logger.end(new Date());
+		logger.start(new Date());
+		state = State.BREAK;
+		baseTime = new Date();
+	}
+
 	public void stop() {
 		logger.interrupt(new Date());
 		state = State.WAIT;
@@ -98,9 +106,8 @@ public class Pomodoro {
 		switch (state) {
 			case RUNNING:
 				if (getRemainSeconds() == 0) {
-					finish();
+					breakStart();
 				}
-
 			case BREAK:
 				if (getRemainSeconds() == 0) {
 					finish();

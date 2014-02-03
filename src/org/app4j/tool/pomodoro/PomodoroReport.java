@@ -29,6 +29,7 @@ public class PomodoroReport implements TickListener {
 	final Chart chart;
 	Date base = new Date();
 	Date lastUpdateTime = new Date();
+	Pomodoro.State lastState = Pomodoro.State.WAIT;
 
 	public PomodoroReport(Logger logger) {
 		this.logger = logger;
@@ -106,7 +107,7 @@ public class PomodoroReport implements TickListener {
 					if (toolWindow != null) {
 						Content content = toolWindow.getContentManager().getSelectedContent();
 						if (content != null) {
-							content.setDisplayName("IDEA " + totalSeconds + " minutes, Pomodoro " + totalPomodoroSeconds + " minutes");
+							content.setDisplayName("Week " + Dates.weekOfYear(new Date()) + ", IDEA " + totalSeconds + " minutes, Pomodoro " + totalPomodoroSeconds + " minutes");
 						}
 					}
 				}
@@ -117,10 +118,10 @@ public class PomodoroReport implements TickListener {
 
 	@Override
 	public void tick(Pomodoro pomodoro) {
-		if (System.currentTimeMillis() - lastUpdateTime.getTime() > 10 * 1000) {
+		if (lastState != pomodoro.getState() || System.currentTimeMillis() - lastUpdateTime.getTime() > 10 * 1000) {
 			lastUpdateTime = new Date();
+			lastState = pomodoro.getState();
 			showCurrentWeek();
-
 		}
 	}
 }

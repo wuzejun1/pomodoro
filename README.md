@@ -1,7 +1,10 @@
 #### Intellij IDEA Pomodoro plugin
 
-Inspired by https://github.com/dkandalov/pomodoro-tm, and use some icons.
-![](https://raw2.github.com/chifei/pomodoro/d957c4d7ca089597551953d7444bc76ae4b34822/doc/idea.png)
+IDEA pomodoro plugin is a tool to track how much time you spend on IDEA, and the pomodoro timer helps you focus.
+I write it for myself, but enjoy, friends.
+
+Inspired by https://github.com/dkandalov/pomodoro-tm, and use 3 of its icons.
+![](https://raw2.github.com/chifei/pomodoro/master/doc/idea.png)
 
 #### Features
 - pomodoro timer
@@ -9,7 +12,6 @@ Inspired by https://github.com/dkandalov/pomodoro-tm, and use some icons.
 
 #### Todo
 - add week/month/year report
-- add break time support
 - add settings page.
 
 #### Install

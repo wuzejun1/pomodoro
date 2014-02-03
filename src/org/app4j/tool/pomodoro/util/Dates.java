@@ -19,6 +19,12 @@ public abstract class Dates {
 		return Integer.parseInt(parts[0]) * 60 * 60 + Integer.parseInt(parts[1]) * 60 + Integer.parseInt(parts[2]);
 	}
 
+	public static int secondsOfDay(Date date) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		return calendar.get(Calendar.HOUR) * 60 * 60 + calendar.get(Calendar.MINUTE) * 60 + calendar.get(Calendar.SECOND);
+	}
+
 	public static int minuteOfDay(Date date) {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);

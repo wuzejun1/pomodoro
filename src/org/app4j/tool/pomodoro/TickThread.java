@@ -14,7 +14,7 @@ public class TickThread extends Thread {
 		while (!stopped) {
 			pomodoro.tick();
 			try {
-				Thread.sleep(500);
+				Thread.sleep(900);
 			} catch (InterruptedException e) {
 				break;
 			}
