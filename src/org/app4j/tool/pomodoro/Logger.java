@@ -47,7 +47,15 @@ public class Logger {
 	public void interrupt(Date end) {
 		LogEntry logEntry = lastEntry();
 		if (logEntry != null && !logEntry.isComplete()) {
-			storage.append("^" + new SimpleDateFormat(TIME_FORMAT).format(end) + "]");
+            if (Dates.isTheSameDay(logEntry.getDate(), end)){
+			    storage.append("^" + new SimpleDateFormat(TIME_FORMAT).format(end) + "]");
+            }
+            else{
+                String lastLine = storage.getLastLine();
+                String endTime = lastLine.substring(lastLine.lastIndexOf('[') + 1);
+                storage.append("^" + endTime + "]");
+            }
+
 		}
 	}
 
